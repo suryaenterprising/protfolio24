@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://suryaenterprising.github.io/protfolio24/sitemap.xml
