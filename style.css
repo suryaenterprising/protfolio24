@@ -4,7 +4,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #030014; /* Deeper, richer dark base */
+  --bg: #050515; /* Slightly more colorful dark base */
   --surface: rgba(255,255,255,0.04);
   --glass: rgba(255,255,255,0.06);
   --glass-border: rgba(255,255,255,0.1);
@@ -39,12 +39,18 @@ body {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(ellipse at 15% 15%, rgba(124,58,237,0.18) 0%, transparent 65%),
-    radial-gradient(ellipse at 85% 85%, rgba(6,182,212,0.16) 0%, transparent 65%),
-    radial-gradient(ellipse at 50% 50%, rgba(245,158,11,0.06) 0%, transparent 75%),
-    radial-gradient(circle at 10% 90%, rgba(236, 72, 153, 0.08) 0%, transparent 50%);
+    radial-gradient(ellipse at 10% 10%, rgba(124,58,237,0.25) 0%, transparent 70%),
+    radial-gradient(ellipse at 90% 90%, rgba(6,182,212,0.22) 0%, transparent 70%),
+    radial-gradient(ellipse at 50% 50%, rgba(245,158,11,0.1) 0%, transparent 80%),
+    radial-gradient(circle at 0% 100%, rgba(236, 72, 153, 0.15) 0%, transparent 60%),
+    radial-gradient(circle at 100% 0%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
+  animation: meshPulse 20s ease-in-out infinite alternate;
+}
+@keyframes meshPulse {
+  0% { opacity: 0.8; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.1); }
 }
 
 .orb {
@@ -55,10 +61,10 @@ body {
   z-index: 0;
   animation: floatOrb 12s ease-in-out infinite;
 }
-.orb-1 { width: 450px; height: 450px; background: rgba(124,58,237,0.22); top: -120px; left: -120px; animation-delay: 0s; }
-.orb-2 { width: 350px; height: 350px; background: rgba(6,182,212,0.18); bottom: 15%; right: -100px; animation-delay: -4s; }
-.orb-3 { width: 300px; height: 300px; background: rgba(245,158,11,0.12); top: 40%; left: 35%; animation-delay: -8s; }
-.orb-4 { width: 200px; height: 200px; background: rgba(236, 72, 153, 0.1); bottom: 5%; left: 10%; animation-delay: -2s; animation: floatOrb 10s ease-in-out infinite; }
+.orb-1 { width: 500px; height: 500px; background: rgba(124,58,237,0.3); top: -150px; left: -150px; animation-delay: 0s; }
+.orb-2 { width: 400px; height: 400px; background: rgba(6,182,212,0.25); bottom: 10%; right: -120px; animation-delay: -4s; }
+.orb-3 { width: 350px; height: 350px; background: rgba(245,158,11,0.18); top: 30%; left: 30%; animation-delay: -8s; }
+.orb-4 { width: 250px; height: 250px; background: rgba(236, 72, 153, 0.2); bottom: -50px; left: 5%; animation-delay: -2s; }
 
 @keyframes floatOrb {
   0%, 100% { transform: translateY(0) scale(1); }
