@@ -4,17 +4,17 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #030014; /* Deepest space base */
-  --surface: rgba(255,255,255,0.03);
-  --glass: rgba(255,255,255,0.05);
-  --glass-border: rgba(255,255,255,0.08);
-  --accent: #8b5cf6; /* Vibrant Violet */
-  --accent2: #06b6d4; /* Vibrant Cyan */
-  --accent3: #ec4899; /* Vibrant Pink */
-  --text: #f1f5f9;
-  --text-muted: #94a3b8;
-  --gradient: linear-gradient(135deg, #7c3aed, #06b6d4);
-  --gradient-glow: linear-gradient(135deg, rgba(124,58,237,0.3), rgba(6,182,212,0.3));
+  --bg: #1a1a40; /* Vibrant Royal Indigo */
+  --surface: rgba(255,255,255,0.08);
+  --glass: rgba(255,255,255,0.1);
+  --glass-border: rgba(255,255,255,0.15);
+  --accent: #a78bfa; /* Soft Violet */
+  --accent2: #22d3ee; /* Bright Cyan */
+  --accent3: #f472b6; /* Soft Pink */
+  --text: #ffffff;
+  --text-muted: #cbd5e1;
+  --gradient: linear-gradient(135deg, #6366f1, #22d3ee);
+  --gradient-glow: linear-gradient(135deg, rgba(99,102,241,0.4), rgba(34,211,238,0.4));
   --font: 'Outfit', sans-serif;
   --mono: 'Fira Code', monospace;
   --radius: 16px;
@@ -39,7 +39,7 @@ body {
   position: fixed;
   inset: 0;
   background: 
-    linear-gradient(to bottom, var(--bg), #080b1a);
+    linear-gradient(135deg, #1a1a40 0%, #0f172a 100%);
   pointer-events: none;
   z-index: -1;
 }
@@ -50,11 +50,11 @@ body {
   width: 200%;
   height: 200%;
   background: 
-    radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.15) 0%, transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.15) 0%, transparent 40%),
-    radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 10% 80%, rgba(59, 130, 246, 0.12) 0%, transparent 40%);
-  filter: blur(100px);
+    radial-gradient(circle at 20% 30%, rgba(99, 102, 241, 0.3) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(34, 211, 238, 0.3) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(244, 114, 182, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 10% 80%, rgba(56, 189, 248, 0.25) 0%, transparent 40%);
+  filter: blur(80px);
   z-index: 0;
   animation: auroraFlow 30s linear infinite;
   pointer-events: none;
@@ -92,7 +92,7 @@ body {
   top: 0; left: 0; right: 0;
   z-index: 100;
   padding: 0 2rem;
-  background: rgba(8,11,20,0.8);
+  background: rgba(26, 26, 64, 0.7);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--glass-border);
   transition: var(--transition);
@@ -199,7 +199,7 @@ section { position: relative; z-index: 1; padding: 6rem 2rem; }
   backdrop-filter: blur(25px) saturate(180%);
   -webkit-backdrop-filter: blur(25px) saturate(180%);
   border-radius: var(--radius);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* ===========================
